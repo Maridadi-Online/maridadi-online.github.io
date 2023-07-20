@@ -1,0 +1,218 @@
+@import 'root';
+@import 'sales';
+
+body
+{
+    main
+    {
+        .main-bar
+        {
+            .products-container
+            {
+                width: 90%;
+                height: 80%;
+                background-color: darken($theme-color, 3);
+                border-radius: 20px;
+                @extend .flex-row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                box-sizing: border-box;
+                padding: 1% 5%;
+
+                .wrapper
+                {
+                    @extend .flex-column;
+                    justify-content: flex-start;
+                    width: 90%;
+                    height: 90%;
+                    align-items: flex-start;
+                    overflow-y: auto;
+                    box-sizing: border-box;
+                    padding: 5% 1%;
+
+                    .item
+                    {
+                        width: 80%;
+                        height: 90px;
+                        background-color: darken($theme-color, 3);
+
+                        padding: 1px 15px;
+                        border-radius: 20px;
+                        margin-bottom: 3%;
+
+                        .info
+                        {
+                            height: 90%;
+                            justify-content: space-around;
+                            align-items: flex-start;
+                            box-sizing: border-box;
+                            padding: 0 5%;
+
+                            h4
+                            {
+                                font-size: 12px;
+                            }
+
+                            h3
+                            {
+                                position: relative;
+                                top: -20px;
+                                font-size: 13px;
+                            }
+
+
+                        }
+
+                        img
+                        {
+                            margin-top: 4%;
+                            width: 120px;
+                            border-radius: 20px;
+                            height: 80px;
+                        }
+
+                        .action
+                        {
+                            height: 80%;
+                            a
+                            {
+                                background-color: lighten($primary-color, 24);
+                                padding: 12px;
+                            }
+                        }
+                    }
+
+                }
+                .wrapper::-webkit-scrollbar
+                {
+                    display: none;
+                }
+
+                .wrapper:hover, .wrapper:focus ~ .wrapper::-webkit-scrollbar
+                {
+                    display: block;
+                }
+            }
+
+            .mini-bar
+            {
+                margin-top: 5%;
+                height: 90%;
+                width: 55%;
+                background-color: lighten($primary-color, 24);
+                border-radius: 20px;
+                @extend .flex-column;
+                justify-content: flex-start;
+                margin-left: 5%;
+
+
+                .mega-card
+                {
+                    width: 90%;
+                    height: 18%;
+                    background-color: lighten($primary-color, 22);
+                    box-shadow: 1px 1px 1px 2px lighten($primary-color, 20);
+                    border-radius: inherit;
+                    @extend .flex-row;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 0 5%;
+                    margin-bottom: 3%;
+
+                    h3
+                    {
+                        // font-weight: bold;
+                        position: relative;
+                        float: left;
+                        left: 10px;
+                        font-size: 15px;
+                    }
+
+                    h1
+                    {
+                        color: lighten($gold, 8);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        main
+        {
+            .main-bar
+            {
+                .mini-header
+                {
+                    height: max-content;
+                    padding-bottom: 20px;
+                    padding-top: 10px;
+                    h4
+                    {
+                        position: relative;
+                        top: 25px;
+                        font-size: 14px;
+                        left: 20px;
+                    }
+                }
+                
+                .products-container
+                {
+                    flex-direction: column;
+                    width: 100%;
+                    padding-bottom: 30px;
+                    border-radius: 0;
+
+                    .wrapper
+                    {
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        .item
+                        {
+                            width: 99%;
+                            height: 75px;
+                            padding: 0;
+                            border-radius: 5px;
+
+                            img
+                            {
+                                width: 65px;
+                                border-radius: 5px;
+                                height: 70px;
+                                margin-top: 2px;
+                            }
+                            .info
+                            {
+                                h3, h4
+                                {
+                                    font-size: 11px;
+                                }
+                            }
+                            .action
+                            {                             
+                               a
+                                {
+                                    padding: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+               
+                .mini-bar
+                {
+                    width: 100%;
+                    margin-left: 0;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}

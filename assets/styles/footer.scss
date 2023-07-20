@@ -1,0 +1,215 @@
+// Root styles for everything
+$primary-color: #280249;
+$theme-color: #ffffff;
+$gold: rgb(198, 172, 25);
+$shadow-color: darken($theme-color,20);
+$dark-color: #00030a;
+$red: rgb(206, 49, 49);
+$green:  rgb(21, 174, 64);
+$bronze: #ac7f0e;
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.x-start
+{
+    @extend .flex-column;
+    align-items: flex-start;
+}
+
+.y-start
+{
+    @extend .flex-column;
+    justify-content: flex-start;
+}
+
+.flex-row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+$cols:(1,2,3,4,5,6, 7, 8);
+
+@each $col in $cols{
+.grid-#{$col}{
+    display: grid;
+    grid-template-columns: repeat(#{$col},1fr);
+    grid-gap: 5px;
+    }
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    footer
+    {
+        overflow-x: hidden;
+        width: 100vw;
+        height: 45vh;
+        background-color: lighten($primary-color, 5);
+        padding-top: 40px;
+        
+        .container
+        {
+            width: 90%;
+            height: 90%;
+
+
+            div:first-of-type
+            {
+                img
+                {
+                    border-radius: 10px;
+                    background-color: darken($theme-color, 2);
+                    padding: 10px;
+                }
+            }
+
+            div:nth-of-type(3)
+            {
+                h3
+                {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+                *
+                {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                }
+
+                li a
+                {
+                    &:hover
+                    {
+                        color: $gold;
+                    }
+                }
+            }
+
+            .quick-links
+            {
+
+                h3
+                {
+                    font-size: 16px;
+
+                }
+                 li a
+                {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+
+                    &:hover
+                    {
+                        color: $gold;
+                    }
+                }
+            }
+            
+                margin-bottom: 10px;
+
+            div:last-of-type
+            {
+                .grid-4
+                {
+                    a
+                    {
+                        margin: 0 5px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: darken($theme-color, 10);
+                        padding: 0.2rem;
+                        @extend .flex-column;
+                        border-radius: 50%;
+
+                        i
+                        {
+                            color: lighten($primary-color, 14);
+                            font-weight: bold;
+                        }
+
+                        &:hover
+                        {
+                            opacity: 0.8;
+                        }
+                    }   
+                }
+            }
+        }
+        small
+        {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px)
+{
+    body
+    {
+        overflow-x: hidden;
+
+        footer
+        {
+            overflow-x: hidden;
+            height: max-content;
+            padding: 20px 0;
+
+            .container
+            {
+                grid-template-columns: repeat(1, 1fr);
+
+                div
+                {
+                    align-items: flex-start;
+                    width: 90%;
+                    margin-bottom: 5%;
+                }
+
+                .quick-links
+                {
+                    nav ul li
+                    {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                div:last-of-type
+                {
+                    .grid-4
+                    {
+                        width: 40%;
+                    }
+                }
+
+
+            }
+            small
+            {
+                width: 90%;
+                height: max-content;
+                text-align: center;
+                a
+                {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

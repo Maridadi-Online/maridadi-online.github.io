@@ -1,0 +1,363 @@
+@import 'root';
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: darken($theme-color, 2);
+
+
+    main
+    {
+        width: 100%;
+        height: 110vh;
+
+        .container-1
+        {
+            height: 80%;
+            @extend .shadowed;
+
+            h2
+            {
+                position: relative;
+                left: 16%;
+                font-size: 15px;
+            }
+
+            width: 40%;
+            height: 70%;
+            background-color: darken ($theme-color,1);
+            box-shadow: 1px 1px 2px 3px darken($theme-color,3);
+            border-radius: 20px; 
+            box-sizing: border-box;
+            padding: 25px;    
+            
+            form
+            {
+                position: relative;
+                left: 1%;
+                align-items: flex-start;
+
+                input,select
+                {
+                    height: 20px;
+                    width: 80%;
+                    border: 1px solid $primary-color;
+                    border-radius: 10px;
+                    padding: 10px;
+                    outline: 0;
+                    background-color: darken($theme-color,3);
+                    margin-bottom: 5px;
+                }
+                select
+                {
+                    height: 35px;
+                    width: 85%;
+                }
+                textarea
+                {
+                    height: 100px;
+                    width: 400px;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px;
+                    outline: 0;
+                    background-color: darken($theme-color,5);
+                    margin-bottom: 5px;
+                    resize: none;
+   
+                }
+
+                button
+                {
+                    margin: 0;
+                }
+                ::placeholder{
+                    font-size: 12px ;
+                }
+            }
+
+        }
+
+        .container
+        {
+            width: 90%;
+            height: max-content;
+            border-radius: 20px; 
+            box-sizing: border-box;
+            padding: 4% 20px;
+            grid-gap: 20px;
+            
+
+            .grid-item:nth-child(1)
+            {
+                opacity: 0;
+                animation: fade 1s ease-in forwards;
+                align-items: flex-start;
+                align-content: flex-start;
+                justify-content: flex-start;
+                margin-top: 1%;
+
+                .text-bold:first-of-type
+                {
+                    position: relative;
+                    left: 50px;
+                    top: -10px;
+                }
+
+                .car
+                {
+                    width: 100%;
+                    position: relative;
+                    left: -50px;
+                    top: 30px;
+                }
+
+                
+                a
+                {
+                    align-self: center;
+                    position: relative;
+                    left: -10%;
+                }
+                
+
+            }
+
+           .grid-item:nth-child(2)
+           {
+                opacity: 0;
+                animation: fade 0.5s ease-in forwards;
+                animation-delay: 0.1s;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 80%;
+                box-sizing: border-box;
+                padding: 2% 0;
+                border-radius: 10px;
+                height: 100%;
+
+                h3
+                {
+                    position: relative;
+                    left: 5%;
+                }
+
+                form 
+                {
+                    position: relative;
+                    margin: 0 auto;
+                    left: 5%;
+
+                    input,select
+                    {
+                        height: 20px;
+                        width: 82%;
+                        border: 1px solid $primary-color;
+                        border-radius: 10px;
+                        padding: 10px;
+                        outline: 0;
+                        background-color: darken($theme-color,1);
+                        margin-bottom: 15px;
+                    }
+                    select
+                    {
+                        height: 40px;
+                        width: 87%;
+                    }
+                    
+                    textarea
+                    {
+                        height: 100px;
+                        width: 400px;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px;
+                        outline: 0;
+                        background-color: darken($theme-color,2);
+                        margin-bottom: 5px;
+                        resize: none;
+       
+                    }
+
+                    button
+                    {
+                        cursor: pointer;
+                        margin: 0 10px 0 0;
+                    }
+
+                    ::placeholder
+                    {
+                        font-size: 12px ;
+                    }
+                }
+                
+
+            }
+
+        }
+
+    }
+    .main-login
+    {
+        height: 90vh;
+
+        .login-form
+        {
+            position: relative;
+            left: 3%;
+
+            input,select
+            {
+                height: 25px;
+                width: 400px;
+                border: none;
+                border-radius: 10px;
+                border: 1px solid $primary-color;
+                padding: 10px;
+                outline: 0;
+                background-color: darken($theme-color,2);
+                margin-bottom: 20px;
+                margin-top: 10px;
+            }
+            select
+            {
+                height: 50px;
+                width: 420px;
+            }
+            textarea
+            {
+                height: 100px;
+                width: 400px;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                outline: 0;
+                background-color: darken($theme-color,2);
+                margin-bottom: 5px;
+                resize: none;
+
+            }
+            ::placeholder
+            {
+                font-size: 12px ;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:301px) and (max-width:768px)
+{
+    body
+    {
+        .login-wrapper
+        {
+            width: 95%;
+            height: max-content;
+            box-sizing: border-box;
+            padding: 2% 0;
+
+            .container
+            {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+
+                .grid-item:nth-child(1)
+                {
+                    width: 100%;
+                    margin: 0;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
+                    .text-bold:first-of-type
+                    {
+                        position: relative;
+                        left: 5%;
+                        margin: 0;
+                        font-size: 6vw;
+                        width: 100%;
+
+                        text-align: center;
+                    }
+
+                    .car
+                    {
+                        width: 95%;
+                        left: 1%;
+                        top: 0;
+                    }
+
+                }
+                .grid-item:nth-child(2)
+                {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    box-shadow: none;
+
+                    h3
+                    {
+                        left: 2%;
+                        width: 90%;
+                        font-size: 6vw;
+                        text-align: center;
+                    }
+
+                    form
+                    {
+                        position: relative;
+                        left: 10%;
+                        width: 100%;
+
+                        input, select
+                        {
+                            width: 80%;
+                        }
+
+
+
+                        button,select
+                        {
+                            width: 87%;
+                        }
+
+                        button
+                        {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-login
+        {
+            width: 100%;
+
+            .container-1
+            {
+                width: 90%;
+                box-shadow: none;
+                div
+                {
+                    width: 95%;
+
+                    form
+                    {
+                        width: 100%;
+                        input
+                        {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+

@@ -1,0 +1,817 @@
+@import 'root';
+
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    .profile-section
+    {
+        width: 100%;
+        height: 90vh;
+        @extend .y-start;
+        box-sizing: border-box;
+        padding: 2% 1%;
+
+        .grid-container
+        {
+            width: 90%;
+            height: 95%;
+            @extend .grid-2;
+            box-sizing: border-box;
+            padding: 0.5%;
+
+            div
+            {
+                .btn-back
+                {
+                    padding: 5px 10px;
+                    position: relative;
+                    top: 2%;
+                    left: 2%;
+                    display: none;
+                }
+            }
+
+            .gr-first
+            {
+
+                @extend .flex-column;
+                width: 80%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 1%;
+
+                .side-menu
+                {
+                    height: 80%;
+                    width: 75%;
+                    @extend .shadowed, .y-start;
+                    background: transparent;
+                    border-radius: 10px;
+                    padding-bottom: 20px;
+                    
+                    .mini-head
+                    {
+                        width: 100%;
+                        height: 50px;
+                        background-color: $primary-color;
+                        position: relative;
+                        border-radius: 10px 10px 0 0;
+                        @extend .flex-column;
+                    }
+
+                    li
+                    {
+                        width: 98%;
+                        height: 50px;
+                        border-bottom: 1px solid lighten($black, 82);
+                        padding: 8px;
+                        background-color: transparent;
+                        box-sizing: border-box;
+                        display: inline-flex;
+
+                        &:last-child
+                        {
+                            border-bottom: none;
+                        }
+
+                        &:hover
+                        {
+                            background-color: darken($theme-color, 4);
+                        }
+
+                        a
+                        {
+                            width: 100%;
+                            height: 100%;
+                            padding: 2px;
+                            color: $black;
+                            text-decoration: none;
+                            font-size: .8rem;
+                            text-transform: capitalize;
+                            margin: 1% 0;
+                            display: inline-flex;
+    
+
+                            i
+                            {
+                                @extend .flex-column;
+                                width: 10px;
+                                height: 10px;
+                                margin-top: -5px;
+                                margin-right: 15px;
+                                padding: 10px;
+                                background-color: $primary-color;
+                                border-radius: 50%;
+                                color: $theme-color;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .gr-last
+            {
+
+                @extend .y-start;
+                width: 120%;
+                height: 100%;
+                box-sizing: border-box;
+    
+                position: relative;
+                left: -20%;
+                padding: 1%;
+                
+
+                .stats-container
+                {
+                    border: inherit;
+                    height: 80%;
+                    width: 98%;
+                    @extend .grid-2;
+                    box-sizing: border-box;
+                    padding: 1%;
+
+
+                    .stat-box
+                    {
+                        padding: 0;
+                        border-radius: 15px;
+                        background-color: darken($theme-color, 2);
+                        width: 95%;
+                        @extend .shadowed, .grid-2;
+                        margin-bottom: 10px;
+
+                        &:hover
+                        {
+                            cursor: pointer;
+                            transition: all 1s ease-in;
+                            transform: scale(1.05);
+
+
+                        }
+
+                        div
+                        {
+                            @extend .x-start;
+                            padding: 15px;
+                            height: 80%;
+
+                            margin: auto;
+                            width: 100%;
+                            position: relative;
+                            left: 10%;
+
+                            *
+                            {
+                                margin: 0;
+                            }
+
+                            h3
+                            {
+                                padding: 0;
+                                margin: 0;
+                                font-size: 30px;
+
+                                color: $gold;
+                            }
+
+                            span
+                            {
+                                margin-top: 10px;
+                                font-size: 15px;
+                            }
+
+                        }
+
+                        i
+                        {
+                            @extend .flex-column;
+                            width: 40%;
+                            position: relative;
+                            left: 10%;
+                            font-size: 30px;
+                            margin: auto;
+                            transition-property: all;
+                            transform: rotate(-15deg);
+                            color: lighten($primary-color, 5);
+                            background-color: lighten($primary-color, 65);
+                            padding: 15px;
+                            border-radius: 50%;
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+
+
+                }
+
+               
+            }
+
+            .orders-container
+            {
+                // border: 1px solid orangered;
+                width: 120%;
+                height: 75vh;
+                padding: 0.5%;
+                position: relative;
+                left: -20%;
+                @extend .y-start;
+                border-radius: 10px;
+
+
+                .pr-container
+                {
+                    width: 95%;
+                    height: 75%;
+                    border: inherit;
+                    box-sizing: border-box;
+                    padding: 1%;
+                    overflow-y: auto;
+                    display: block;
+
+
+
+                    .pr-item
+                    {
+                        display: inline-flex;
+                        width: 95%;
+                        margin-left: 5%;
+                        height: 60px;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+                        padding: 1.5%;
+                        border-radius: 1px;
+                        margin-bottom: 1px;
+
+                        &:nth-child(odd)
+                        {
+                            background-color: darken($theme-color, 3.5);
+                        }
+
+                        p
+                        {
+                            margin-top: 2%;
+                        }
+
+                        *
+                        {
+                            margin: 0;
+                            padding: 0;
+                            font-size: x-small;
+                        }
+
+                        img
+                        {
+                            height: 100%;
+                            width: 10%;
+                        }
+
+                        input
+                        {
+                            width: 10%;
+                            box-sizing: border-box;
+                            padding: 1%;
+                            height: 80%;
+                            background-color: transparent;
+                            border-radius: 5px;
+                            margin-top: 1%;
+                        }
+
+                        a
+                        {
+                            width: 5%;
+                            height: 50%;
+                            @extend .flex-column;
+                            border-radius: 5px;
+                            padding: 2px 2px;
+                            margin-top: 2%
+                        }
+                    }
+
+
+                }
+
+                .total-container
+                {
+                    width: 60%;
+                    height: 15%;
+                    margin-top: 5%;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 2%;
+                    border-radius: 5px;
+
+                    // &, &>*
+                    // {
+                    //     border: 1px solid orangered;
+                    // }
+                    
+                    p, h2, a
+                    {
+                        margin: 0;
+                        height: max-content;
+                        width: max-content;
+                        padding: 2px;
+                    }
+
+                    p span:last-child
+                    {
+                        color: $gold;
+                        font: bold 30px;
+                    }
+
+                    i
+                    {
+                        margin-top: 7px;
+                    }
+
+                    h2
+                    {
+                        color: $gold;
+                    }
+
+                    a
+                    {
+                        font-size: small;
+                        margin-top: 2%;
+                        padding: 10px;
+                        i
+                        {
+                            margin-left: 5px;
+                        }
+
+                        &:hover
+                        {
+
+                            i
+                            {
+                                position: relative;
+                                left: 2px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .info-container
+            {
+                // border: 1px solid orangered;
+                @extend .y-start,  .shadowed;
+                box-sizing: border-box;
+                padding-top: 1px;
+                border-radius: 10px;
+
+                .form-container
+                {
+                    border: inherit;
+                    width: 95%;
+                    height: 98%;
+                    box-sizing: border-box;
+                    padding-top: 10px;
+                    @extend .y-start;
+
+                    form
+                    {
+                        box-sizing: border-box;
+                        padding-left: 10%;
+                        height: 100%;
+                        width: 95%;
+                        border: inherit;
+                        @extend .x-start;
+
+
+                        input, select
+                        {
+                            width: 90%;
+                            margin-bottom: 10px;
+                            height: 25px;
+                            background-color: transparent;
+                            border: 2px solid $primary-color;
+                            border-radius: 10px;
+                            padding: 5px 10px;
+                        }
+
+                        label
+                        {
+                            font-size: 13px;
+                            margin: 2px 0;
+                        }
+
+                        select
+                        {
+                            height: 35px;
+                            width: 95%;
+                        }
+                        
+
+                        button
+                        {
+                            padding: 10px 15px;
+                            cursor: pointer;
+                            
+                            i
+                            {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .grid-2
+                        {
+                            width: 60%;
+                            padding: 5px;
+                        }
+                    }                    
+                }
+            }
+        }
+
+        .checkout-wrapper
+        {
+            width: 90%;
+            height: 90%;
+            @extend .grid-2;
+            box-sizing: border-box;
+            padding: 1%;
+            grid-gap: 10px;
+
+
+            .pr-container
+            {
+                box-sizing: border-box;
+                padding: 1%;
+                @extend .y-start;
+                width: 90%;
+
+
+                h4
+                {
+                    width: 100%;
+                    display: inline-flex;
+                    justify-content: space-around;
+                    height: max-content;
+                }
+                .pr-wrapper
+                {
+                    width: 100%;
+                    height: 60%;
+                    box-sizing: border-box;
+                    padding: 1%;
+                    overflow-y: auto;
+
+                    .pr-item
+                    {
+                        display: inline-flex;
+                        width: 95%;
+                        margin-left: 2%;
+                        height: 60px;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+                        padding: 2%;
+                        border-radius: 1px;
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+        
+                        &:nth-child(odd)
+                        {
+                            background-color: darken($theme-color, 3.5);
+                        }
+        
+                        p
+                        {
+                            margin-top: 2%;
+                        }
+        
+                        *
+                        {
+                            margin: 0;
+                            padding: 0;
+                            font-size: x-small;
+                        }
+        
+                        img
+                        {
+                            height: 100%;
+                            width: 10%;
+                        }
+        
+                        input
+                        {
+                            width: 10%;
+                            box-sizing: border-box;
+                            padding: 1%;
+                            height: 80%;
+                            background-color: transparent;
+                            border-radius: 5px;
+                            margin-top: 1%;
+                        }
+        
+                        a
+                        {
+                            width: 5%;
+                            height: 50%;
+                            @extend .flex-column;
+                            border-radius: 5px;
+                            padding: 2px 2px;
+                            margin-top: 2%
+                        }
+                    }
+                }
+
+                .sum-wrapper
+                {
+                    width: 90%;
+                    height: 25%;
+                    margin-top: 2%;
+                    @extend .grid-2;
+                    box-sizing: border-box;
+                    padding: 2%;
+                    border-radius: 10px;
+                    &, & > *
+                    {
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+            }
+            
+            .info-container
+            {
+                width: 80%;
+                border-radius: 10px;
+                @extend .shadowed, .y-start;
+                box-sizing: border-box;
+                padding: 5% 2%;
+                position: relative;
+                left: 10%;
+
+                a
+                {
+                    font-size: small;
+                    margin-bottom: 5%;
+
+                    &:hover
+                    {
+                        i
+                        {
+                            position: relative;
+                            left: -2px;
+                        }
+                    }
+                }
+
+                form
+                {
+                    height: 80%;
+                    width: 90%;
+                    display: block;
+
+                    label
+                    {
+                        font-size: smaller;
+                    }
+
+                    input
+                    {
+                        height: 35px;
+                        margin-bottom: 15px;
+                        border: 2px solid $primary-color;
+                        border-radius: 10px;
+                        box-sizing: border-box;
+                        padding: 5px 10px;
+                        background-color: transparent;
+                        width: 100%;
+                        margin-top: 2px;
+                    }
+
+                    textarea
+                    {
+                        background-color: transparent;
+                        margin-top: 2px;
+                        box-sizing: border-box;
+                        width: 100%;
+                        resize: none;
+                        border: 2px solid $primary-color;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        height: 100px;
+                    }
+                    
+                    button
+                    {
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+// Path: assets/styles/user.scss
+
+@media screen and (max-width: 768px)
+{
+
+    .md-none
+    {
+        display: none !important;
+    }
+
+    body
+    {
+
+        overflow-x: none;
+
+        .profile-section
+        {
+
+
+            .grid-container
+            {
+                width: 95%;
+                grid-template-columns: repeat(1, 1fr);
+                
+                & > div
+                {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                    margin: 0;
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    margin-bottom: 20px;
+                }
+
+                .gr-first
+                {
+                    padding-top: 5%;
+                    width: 100%;
+
+
+                    .side-menu
+                    {
+                        width: 95%;
+                        height: max-content;
+                        box-shadow: none;
+                    }   
+                }
+
+                .gr-last
+                {
+                    width: 100%;
+                    left: 0;
+
+                    .stats-container
+                    {
+                        grid-template-columns: repeat(1, 1fr);
+
+                        .stat-box
+                        {
+                            width: 95%;
+                            margin: 10px auto;
+                            height: 90%;
+
+                            div
+                            {
+                                h3
+                                {
+                                    font-size: 20px;
+                                }
+
+                                span
+                                {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+                .orders-container
+                {
+                    left: 0;
+                    width: 100%;
+                    box-shadow: none;
+
+                    h4
+                    {
+                        position: relative;
+                        left: -1.8%;
+                        width: 85%;
+                        display: inline-flex;
+                        justify-content: space-between;
+                    }
+
+                    .btn-back
+                    {
+                        display: flex;
+                        margin-top: -2px;
+
+                        i
+                        {
+                            margin-right: 5px;
+                            margin-top: 3px;
+                        }
+                    }
+
+                    .pr-container
+                    {
+                        width: 99%;
+                        height: max-content;
+
+                        .pr-item
+                        {
+                            width: 95%;
+                            align-content: center;
+                            height: 60px;
+
+                            img
+                            {
+                                height: 100%;
+                            }
+
+                            div
+                            {
+                                small, h1
+                                {
+                                    font-size: 10px;
+                                }
+
+                                a
+                                {
+                                    font-size: 10px;
+                                    text-decoration: underline;
+                                }
+
+                                .btn-primary, .btn-red, .btn-green
+                                {
+                                    text-decoration: none;
+
+                                    padding: 8px;
+                                    font-size: 8px;
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .info-container
+                {
+                    box-shadow: none;
+                    padding: 0;
+
+                    h4
+                    {
+                        width: 95%;
+                        display: inline-flex;
+                        justify-content: space-around;
+                    }
+                    .btn-back
+                    {
+                        display: block;
+                    }
+
+                    .form-container
+                    {
+                        align-items: flex-start;
+
+                        form
+                        {
+                            margin: 0;
+                            left: 0;
+                            width: 100%;
+                            padding-left: 5%;
+
+                            input
+                            {
+                                width: 87%;
+                                margin-left: 0;
+                                left: 0;
+                            }
+
+                            button
+                            {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

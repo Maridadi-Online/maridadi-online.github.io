@@ -1,0 +1,189 @@
+@import 'root';
+
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: darken($theme-color, 1);
+    
+
+    main
+    {
+
+        @extend .flex-column;
+        width: 100vw;
+        height: 80vh;
+        box-sizing: border-box;
+        padding: 3%;
+        background-color: darken($theme-color, 1);
+        position: relative;
+        top: -27px;
+
+        .grid-container
+        {
+            border-radius: 20px;
+            width: 95%;
+            height: 90%;
+
+            img
+            {
+                opacity: 0;
+                animation: slideleft 0.5s ease-in forwards;
+                animation-delay: 0.1s;   
+            }
+
+            .text
+            {
+                opacity: 0;
+                animation: fade 1s ease-in forwards;
+                animation-delay: 0.6s;
+                align-items: flex-start;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                padding-top: 15%;
+                position: relative;
+                left: 10%;
+                width: 80%;
+
+                p{
+                    opacity: 0.6;
+                    font-weight: 500;
+                    font-size: 14px;
+
+                }
+            }
+        }
+
+    }
+
+    .features
+    {
+        width: 100vw;
+        height: 82vh;
+        box-sizing: border-box;
+        padding: 3%;
+        position: relative;
+        background-color: darken($theme-color, 1);
+
+        .grid-container
+        {
+            border-radius: 20px;
+            width: 95%;
+            height: 90%;
+
+            .text
+            {
+                align-items: flex-start;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                padding-top: -13%;
+                position: relative;
+                left: 10%;
+                width: 90%;
+
+                img
+                {
+                    display: none;
+                }
+
+                p
+                {
+                    opacity: 0.6;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        main
+        {
+            height: max-content;
+            box-sizing: border-box;
+            padding: 5%;
+
+            .grid-container
+            {
+                grid-template-columns: repeat(1, 1fr);
+                height: max-content;
+                width: 90%;
+
+                img
+                {
+                    width: 100%;
+                    height: max-content;
+                }
+
+                .text
+                {
+                    left: 0%;
+                    width: 100%;
+                    height: max-content;
+
+                    h2
+                    {
+                        font-size: 7vw;
+                    }
+
+                    p
+                    {
+                        font-size: 13px;
+                        left: 0%;
+                    }
+                }
+            }
+        }
+
+        .features
+        {
+            box-sizing: border-box;
+            padding: 5%;
+            height: max-content;
+            .grid-container
+            {
+                grid-template-columns: repeat(1, 1fr);
+                width: 90%;
+                .text
+                {
+                    left: 0%;
+                    width: 100%;
+                    h2
+                    {
+                        font-size: 7vw;
+                    }
+
+                    p
+                    {
+                        font-size: 13px;
+                        left: 0%;
+                    }
+
+                    img
+                    {
+                        display: block;
+                        width: 100%;
+                    }
+
+                }
+                img
+                {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}
+

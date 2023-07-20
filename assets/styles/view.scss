@@ -1,0 +1,431 @@
+    @import 'root';
+    @import 'sales';
+
+    body
+    {
+        .modal-z
+        {
+            width: 100%;
+            height: 100%;
+            z-index: 155455;
+            position: fixed;
+            background-attachment: fixed;
+            background-color: rgba(7, 2, 2, 0.5);
+            backdrop-filter: blur(5px);
+            top: 0;
+            left: 0;
+            display: none;
+
+            .modal-content
+            {
+    
+                border-radius: 10px;
+                width: 30%;
+                height: 55%;
+                background-color: darken($theme-color,5);
+                opacity: 0;
+                position: sticky;
+                border-radius: 20px;
+    
+                backdrop-filter: blur(2px);
+                margin: 0 auto;
+                animation: slideDown forwards 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1;
+                animation-delay: 0.5s;
+    
+                input
+                {
+                    color: $primary-color;
+                    width: 350px;
+                    height: 30px;
+                    background-color: darken($theme-color,10);
+                    color: darken($primary-color,5);
+                    border-color: transparent;
+                    border-radius: 10px;
+    
+                    padding: 5px 5px 0 10px;
+                    outline: 0;
+                }
+                ::placeholder
+                {
+                    font-size: 13px;
+                }
+    
+                span
+                {
+                    position: absolute;
+                    float: right;
+                    text-align: center;
+                    right: 30px;
+                    top: 30px;
+                    font-size: 1.3rem;
+                    padding: 0.4rem ;
+                    color: $theme-color;
+                    background-color: $red;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                .btn-red
+                {
+                    border-radius: 20px;
+                    i
+                    {
+                        margin-right: 10px;
+                    }
+                }
+        }
+    
+        }
+    
+    
+
+        .modal
+        {
+            width: 100%;
+            height: 100%;
+            z-index: 155455;
+            position: fixed;
+            background-attachment: fixed;
+            background-color: rgba(7, 2, 2, 0.5);
+            backdrop-filter: blur(5px);
+            top: 0;
+            left: 0;
+            display: none;
+    
+            .modal-content
+            {
+    
+                border-radius: 20px;
+                width: 65%;
+                height: 75%;
+                background-color: darken($theme-color,5);
+                opacity: 0;
+                position: sticky;
+                border-radius: 10px;
+    
+                backdrop-filter: blur(2px);
+                margin: 0 auto;
+                animation: slideDown forwards 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1;
+                animation-delay: 0.5s;
+    
+                #closer
+                {
+                    position: absolute;
+                    float: right;
+                    text-align: center;
+                    right: 30px;
+                    top: 30px;
+                    font-size: 1.3rem;
+                    padding: 0.4rem ;
+                    color: $theme-color;
+                    background-color: lighten($primary-color, 24);
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                form
+                {
+                    align-items: flex-start;
+                    position: relative;
+                    top: -10px;
+    
+                    .form-grp
+                    {
+                        margin: 5px 10px 0 10px;
+                    }
+                    .form-grp-2
+                    {
+                        align-items: flex-start;
+
+                        input
+                        {
+                            padding: 5px 15px;
+                            width: 450px;
+                            margin-bottom: 10px;
+                        }
+
+                        button
+                        {
+                            width: 200px;
+                            background-color: lighen($primary-color, 24);
+                            border-radius: 20px;
+                        }
+                    }
+
+                    label
+                    {
+                        position: relative;
+                        left: 10px;
+                        font-size: 13px;
+                    }
+    
+                    *
+                    {
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                    }
+
+                    select
+                    {
+                        width: 375px;
+                        height: 40px;
+                        background-color: darken($theme-color,10);
+                        color: darken($primary-color,5);
+                        border-color: transparent;
+                        border-radius: 10px;
+                        padding: 0 10px 0 10px;
+                        outline: 0;
+                        color: $primary-color;
+                    }
+
+                   select option, select option:hover, select option:active
+                   {
+    
+                        background-color: lighten $primary-color 5;
+                    }
+                    input
+                    {
+                        color: $primary-color;
+                        width: 350px;
+                        height: 30px;
+                        background-color: darken($theme-color,10);
+                        color: darken($primary-color,5);
+                        border-color: transparent;
+                        border-radius: 10px;
+    
+                        padding: 5px 5px 0 10px;
+                        outline: 0;
+                    }
+                    ::placeholder
+                    {
+                        font-size: 13px;
+                    }
+                    textarea
+                    {
+                        box-sizing: border-box;
+                        resize: none;
+                        color: $primary-color;
+                        width: 375px;
+                        height: 150px;
+                        background-color: darken($theme-color,8);
+                        color: darken($primary-color,5);
+                        border-color: transparent;
+                        border-radius: 10px;
+                        padding: 10px 10px 0 10px;
+                        outline: 0;
+                    }
+                    button
+                    {
+                        text-transform: uppercase;
+                        width: 375px;
+                        border-radius: 20px;
+                        background-color: lighten($primary-color, 24);
+                    }
+                }
+    
+            }
+    
+        }
+    
+
+        main
+        {
+            .main-bar
+            {
+                
+                .view
+                {
+                    height: 80%;
+                    width: 90%;
+                    background-color: darken($theme-color, 2.5);
+                    border-radius: 20px;
+                    @extend .flex-column;
+
+                    .grid-container
+                    {
+                        width: 95%;
+                        height: 80%;
+                        border-radius: inherit;
+                        box-sizing: border-box;
+                        padding: 2%;
+                        @extend .grid-3;
+                        grid-gap: 20px;
+
+                        img
+                        {
+                            border-radius: inherit;
+                            width: 100%;
+                            height: 95%;
+                        }
+
+                        .info
+                        {
+                            border-radius: inherit;
+                            height: 95%;
+                            width: 100%;
+                            background-color: darken($theme-color, 3);
+                            @extend .flex-column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            box-sizing: border-box;
+                            padding: 0 10%;
+
+
+                            h3
+                            {
+                                text-align: center;
+                            }
+
+                            p
+                            {
+                                font-size: 14px;
+                                opacity: 0.8;
+
+                                i
+                                {
+                                    color: lighten($primary-color, 24);
+                                    margin-right: 10px;
+                                    font-size: 19px;
+                                }
+                            }
+
+                            .grid-2
+                            {
+                                background-color: darken($theme-color, 5);
+                                border-radius: inherit;
+                                padding: 15px;
+                                margin: auto;
+                                grid-gap: 40px;
+                            }
+                        }
+
+                        .overview
+                        {
+                            border-radius: inherit;
+                            height: 95%;
+                            width: 100%;
+                            background-color: darken($theme-color, 3);
+                            @extend .flex-column;
+                            justify-content: flex-start;
+
+                            h3
+                            {
+                                color: $gold;
+                            }
+
+                            .mega-card
+                            {
+                                width: 93%;
+                                height: 18%;
+                                background-color: darken($theme-color, 4.5);
+                                // box-shadow: 1px 1px 1px 2px darken($theme-color, 12);
+                                border-radius: inherit;
+                                @extend .flex-row;
+                                justify-content: space-between;
+                                box-sizing: border-box;
+                                padding: 0 5%;
+                                margin-bottom: 5%;
+
+
+            
+                                h3
+                                {
+                                    font-weight: 500;
+                                    position: relative;
+                                    float: left;
+                                    left: 10px;
+                                    font-size: 15px;
+                                    color: lighten($primary-color, 20);
+                                    letter-spacing: 0.5px;
+                                }
+            
+                                h1
+                                {
+                                    color: lighten($gold, 4);
+                                }
+                            }
+                        }
+
+                    }
+            }
+                }
+        }
+    }
+
+
+
+    @media screen and (max-width: 768px)
+    {
+        body
+        {
+
+            .modal
+            .modal-content
+            {
+                width: 92%;
+                height: 90%;
+                padding: 20px 0;
+
+                #closer
+                {
+                    top: 15px;
+                    right: 15px;
+                    padding: 2px;
+                }
+                form
+                {
+                    grid-template-columns: repeat(1, 1fr);
+                    width: 90%;
+                    top: 5px;
+
+                    input
+                    {
+                        width: 94%;
+                        margin: 0 0 10px 0;
+                    }
+                    textarea, select
+                    {
+                        width: 100%;
+                    }
+
+                    button
+                    {
+                        width: 80%;
+                    }
+                }
+            }
+            .modal-z
+            .modal-content
+            {
+                width: 90%;
+            }
+            main
+            {
+                .main-bar
+                {
+                    height: max-content;
+                    .view
+                    {
+                        background-color: transparent;                     
+                        .grid-container
+                        {
+                            grid-template-columns: repeat(1, 1fr);
+                            
+                            .info
+                            {
+                                height: max-content;
+                                padding-bottom: 20px;
+
+                                .grid-2
+                                {
+                                    margin-top: 10px;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }   
+        }
+    }

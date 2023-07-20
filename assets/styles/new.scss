@@ -1,0 +1,280 @@
+@import 'root';
+@import 'sales';
+
+body
+{
+    main
+    {
+        .main-bar
+        {
+            .form-container
+            {
+                width: 95%;
+                height: 70%;
+                background: darken($theme-color, 2);
+                box-shadow: 1px 1px 1px 2px darken($theme-color, 4);
+                border-radius: 30px;
+                @extend .flex-column;
+                
+                .grid-2
+                {
+                    width: 95%;
+                    height: 90%;
+
+                    .form-wrapper
+                    {
+                        width: 120%;
+                        height: 95%;
+
+                        form
+                        {
+                            align-items: flex-start;
+                            position: relative;
+                            top: 10%;
+            
+                            .form-grp
+                            {
+                                margin: 5px 10px 0 10px;
+                            }
+                            
+                            label
+                            {
+                                position: relative;
+                                left: 10px;
+                                font-size: 13px;
+                            }
+            
+                            *
+                            {
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                            }
+                            select
+                            {
+                                width: 275px;
+                                height: 40px;
+                                background-color: darken($theme-color,4);
+                                color: darken($primary-color,5);
+                                border-color: transparent;
+                                border-radius: 10px;
+                                padding: 0 10px 0 10px;
+                                outline: 0;
+                                color: $primary-color;
+                            }
+
+                           select option, select option:hover, select option:active
+                           {
+            
+                                background-color: lighten $primary-color 5;
+                            }
+
+                            input
+                            {
+                                color: $primary-color;
+                                width: 250px;
+                                height: 30px;
+                                background-color: darken($theme-color,4);
+                                color: darken($primary-color,5);
+                                border-color: transparent;
+                                border-radius: 10px;
+            
+                                padding: 5px 5px 0 10px;
+                                outline: 0;
+                            }
+                            ::placeholder
+                            {
+                                font-size: 12px;
+                            }
+                            textarea
+                            {
+                                box-sizing: border-box;
+                                resize: none;
+                                color: $primary-color;
+                                width: 275px;
+                                height: 105px;
+                                background-color: darken($theme-color,4);
+                                color: darken($primary-color,5);
+                                border-color: transparent;
+                                border-radius: 10px;
+                                padding: 10px 10px 0 10px;
+                                outline: 0;
+                            }
+                            button
+                            {
+                                background-color: lighten($primary-color, 24);
+                                text-transform: uppercase;
+                                width: 275px;
+                                border-radius: 20px;
+                                cursor: pointer;
+
+                                i
+                                {
+                                    position: relative;
+                                    left: -30px;
+                                    width: 10px;
+                                }
+                            }
+                        }
+            
+            
+            
+                    }
+
+                    .mini-bar
+                    {
+                        position: relative;
+                        top: 20%;
+                        margin-left: 33%;
+                        width: 70%;
+                        height: 65%;
+                        background-color: lighten($primary-color, 24);
+                        @extend .flex-column;
+                        justify-content: flex-start;
+                        box-sizing: border-box;
+                        padding: 0 5%;
+                        border-radius: 20px;
+
+                        form
+                        {
+                            position: relative;
+                            top: 12%;
+
+                            input
+                            {
+                                color: $primary-color;
+                                width: 80%;
+                                height: 30px;
+                                background-color: darken($theme-color,5);
+                                color: darken($primary-color,5);
+                                border-color: transparent;
+                                border-radius: 10px;
+            
+                                padding: 5px  10px;
+                                outline: 0;
+                                margin-bottom: 10px;
+                            }::placeholder
+                            {
+                                font-size: 11px;
+                            }
+
+                            button
+                            {
+                                background-color: lighten($gold, 5);
+                                text-transform: uppercase;
+                                width: 105px;
+                                border-radius: 25px;
+                                padding: 10px;
+                                cursor: pointer;
+                                i
+                                {
+                                    position: relative;
+                                    left: -10px;
+                                    width: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        overflow-x: hidden;
+        
+    main
+    {
+        overflow-x: hidden;
+
+        .main-bar
+        {
+            height: max-content;
+            padding: 0%;
+            align-items: center;
+
+            .form-container
+            {
+                height: max-content;
+                width: 95%;
+                padding: 0;
+                box-shadow: none;
+                padding-bottom: 50px;
+                background-color: transparent;
+
+                .grid-2
+                {
+                    grid-template-columns: repeat(1, 1fr);
+                    height: inherit;
+                    position: relative;
+                    left: 0;
+                    padding: 0;
+                    width: 90%;
+
+                    .form-wrapper
+                    {
+                        width: 100%;
+                        height: max-content;
+                        box-sizing: border-box;
+                        padding: 0;
+                        margin-left: -5px;
+
+
+                        form
+                        {
+                            position: relative;
+                            top: 0;
+                            margin-top: 0;
+                            left: 0%;
+                            align-items: flex-start;
+                            margin: 0;
+                            width: max-content;
+
+
+                            .form-grp
+                            {
+                                margin: 0;
+                            }
+                            
+                            input
+                            {
+                                width: 80%;
+                                background-color: darken($theme-color, 8);
+                            }
+                            button
+                            {
+                                width: 80%;
+                            }
+                            textarea,select
+                            {
+                                width: 86%;
+                                background-color: darken($theme-color, 8);
+
+                            }
+                            
+                        }
+                    }
+                    .mini-bar
+                    {
+                        width: 86%;
+                        align-self: center;
+                        justify-self: center;
+                        align-content: center;
+                        justify-items: center;
+                        margin: 0;
+                        height: max-content;
+                        padding-bottom: 30px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    }
+}

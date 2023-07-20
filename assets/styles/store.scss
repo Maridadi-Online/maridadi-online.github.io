@@ -1,0 +1,628 @@
+@import 'root';
+@import 'animation';
+
+body
+{
+    background-color: darken($theme-color, 1);
+    overflow-x: hidden;
+    height: max-content;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    & > *
+    {
+        box-sizing: border-box;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+
+    .hero
+    {
+        height: 90vh;
+        width: 100%;
+        @extend .y-start;
+        box-sizing: border-box;
+        padding-top: 2%;
+
+
+        .container
+        {
+
+            width: 80%;
+            height: 85%;
+            border-radius: 10px;
+            animation: fade 1s ease-in;
+
+
+            img
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                z-index: 1;
+            }
+
+            .info
+            {
+
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+                position: relative;
+                top: -101%;
+                background-color: rgba(0, 0, 0, 0.48);
+                border-radius: inherit;
+                backdrop-filter: blur(5px);
+              
+                @extend .x-start;
+                box-sizing: border-box;
+                padding-left: 5%;
+
+                h1
+                {
+                    opacity: 0;
+                    animation: fade 1s ease-in forwards;
+                    animation-delay: 0.6s;
+                    font-size: 2em;
+                    color: $theme-color;
+                    text-transform: uppercase;
+                }
+
+                a
+                {
+                    opacity: 0;
+                    animation: slideleft 1s ease-in forwards;
+                    animation-delay: 1.2s;
+                }
+
+            }            
+        }
+
+
+        .grid-container
+        {
+            width: 85%;
+            height: 95%;
+            @extend .grid-3;
+
+            box-sizing: border-box;
+            padding: 1%;
+            grid-gap: 10px;
+
+            div
+            {
+               @extend .y-start;
+   
+               box-sizing: border-box;
+               padding: 1%;
+
+               .micro-header
+               {
+        
+                    height: 50px;
+                    width: 95%;
+                    @extend .x-start;
+                    box-sizing: border-box;
+                    padding-bottom: 2%;
+
+                p
+                {
+
+                    a
+                    {
+                        width: max-content;
+                        padding: 7px 10px;
+                        // background-color: darken($theme-color, 4);
+                        border-radius: 10px;
+                        margin: 0 5px;
+                        font-size: 11px;
+
+                        &:hover
+                        {
+                            background-color: darken($theme-color, 3);
+
+                        }
+                    }
+
+                    i
+                    {
+                        color: $primary-color;
+                        font-size: 11px;
+
+                    }
+                }
+
+               }
+
+               img
+               {
+                    width: 95%;
+                    height: 75%;
+                    position: relative;
+                    top: 2%;
+                    border-radius: 5px;
+                    margin-bottom: 5%;
+
+                    &:hover
+                    {
+                        @extend .shadowed;
+                        transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+                        transform: scale(1.01);
+                    }
+               }
+
+               a
+               {
+                    padding: 15px 25px;
+                    width: 60%;
+                    text-align: center;
+                    font-size: 15px;
+
+                    i
+                    {
+                        margin: 0 10px;
+
+                    }
+
+                    &:hover
+                    {
+
+                        i
+                        {
+                            transition: all 1s ease-in;
+                            color: $theme-color;
+                        }
+                    }
+               }
+
+            }
+
+            div:nth-child(2), div:nth-child(3)
+            {
+                @extend .x-start, .y-start;
+                box-sizing: border-box;
+                padding: 16% 5%;
+                width: 100%;
+
+                h1,small, h4, h5
+                {
+                    width: max-content;
+                    width: 90%;
+                    height: max-content;
+                    margin: 5px 0;
+                    letter-spacing: 0.15px;
+
+                }
+
+                h5
+                {
+                    font-size: 13px;
+                    i
+                    {
+                        margin-right: 10px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                small
+                {
+                    font-size: 11.5px;
+                    letter-spacing: 0.15px;
+                }
+
+                .border-primary
+                {
+                    height: 3px;
+                    padding: 0;
+                    margin: 20px 0;
+                }
+            }
+
+
+        }
+    }
+
+    .browse
+    {
+        width: 100vw;
+        height: 100vh;
+        @extend .y-start;
+        
+        .grid-container
+        {
+            width: 80%;
+            height: 50%;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 2%;
+
+            @extend .grid-4;
+
+            .grid-item
+            {
+                @extend .y-start;
+                width: 100%;
+                height: 80%;
+
+                img
+                {
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .form-container
+        {
+            width: 50%;
+            height: 25%;
+            @extend .flex-column;
+            
+            h3
+            {
+                align-self: flex-start;
+            }
+            form
+            {
+                width: 100%;
+                display: inline-flex;
+        
+                input
+                {
+                    width: 80%;
+                    height: 25px;
+                    border-radius: 30px;
+                    border: 1px solid $primary-color;
+                    padding: 15px 20px;
+                    background-color: darken($theme-color, 2);
+                    
+                }
+
+                button
+                {
+                    width: max-content;
+                    @extend .btn-primary;
+                    border-radius: 30px;
+                    position: relative;
+                    left: -85px;
+                    padding: 10px 15px;
+                    height: 40px;
+                    margin-top: 1.5%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .products-wrapper
+    {
+        width: 100vw;
+        height: max-content;
+        @extend .y-start;
+        padding-top: 7.5%;
+
+        .banner
+        {
+            width: 85%;
+            height: 50px;
+            border-radius: 2px 2px 0 0;
+            background-color: $primary-color;
+            box-sizing: border-box;
+            padding: 0 1%;
+            @extend .flex-row;
+            justify-content: space-between;
+
+            a
+            {
+                color: $theme-color;
+                font-size: 13px;
+
+                i
+                {
+                    color: lighten($primary-color, 50);
+                }
+
+                &:hover
+                {
+
+                    i
+                    {
+                        transition: all 1s ease-in;
+                        position: relative;
+                        left: 2px;
+                    }
+                }
+            }
+            
+        }
+
+        .products-container
+        {
+            box-shadow: inset 10px 10px rgba(255, 255, 255, 0.157), inset -1px -1px rgba(255, 255, 255, 0.198), 1px 3px 24px -1px rgba(0,0,0,.15);
+            border-radius: 0 2px 2px;
+            width: 85%;
+            height: max-content;            
+            @extend .grid-6;
+            grid-gap: 5px;
+            box-sizing: border-box;
+            padding: 2% 2% 0 2%;
+            margin-bottom: 50px;
+
+            .product
+            {
+                @extend .y-start;
+                width: 90%;
+                height: 85%;
+                border-radius: 1px;
+                box-sizing: border-box;
+                padding: 2%;
+                background-color: darken($theme-color, 1);
+
+                &:hover
+                {
+                    transition: all 1s ease-in-out;
+                    transform: translateY(-10px);
+                    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.257), inset -1px -1px rgba(255, 255, 255, 0.198), 1px 3px 24px -1px rgba(0,0,0,.15);
+                }
+
+                img
+                {
+                    width: 100%;
+                    height: 50%;
+
+                }
+
+                .info
+                {
+                    @extend .flex-column;
+                    box-sizing: border-box;
+                    padding: 2% 1%;
+
+                    h4, h1
+                    {
+                        margin: 5px 0;
+                        font-size: 1.5vw;
+                        text-align: center;
+                        max-width: 100%;
+                        max-height: max-content;
+                    }
+
+                    h4 
+                    {
+                        font-size: 1vw;
+                    }
+
+
+                    small
+                    {
+                        font-size: 0.9vw;
+                    }
+
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+    body
+    {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+
+
+
+
+
+        .browse
+        {
+            height: max-content;
+            padding-bottom: 50px;
+            width: 100%;
+            overflow-x: hidden;
+
+            .grid-container
+            {
+                grid-template-columns: repeat(2, 1fr);
+
+                .grid-item
+                {
+                    img
+                    {
+                        height: 100px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .form-container
+            {
+                width: 80%;
+
+                h3
+                {
+                    position: relative;
+                    left: 10px;
+
+                }
+
+                form
+                {
+                    width: 95%;
+                    display: block;
+                    margin: 0;
+                    left: 0;
+
+                    input
+                    {
+                        width: 95%;
+                        position: relative;
+                        left: 0;
+                        margin: 0;
+                    }
+
+                    button
+                    {
+                        position: relative;
+                        left: 0;
+                        margin: 0;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+
+        .products-wrapper
+        {
+            position: relative;
+            width: 100%;
+            left: 0;
+            height: max-content;
+            overflow-x: hidden !important;
+            box-sizing: border-box;
+            padding: 1%;
+
+            .banner
+            {
+                box-sizing: border-box;
+                padding: 5%;
+                background-color: darken($theme-color, 3);
+                border-radius: 5px;
+                
+
+                p
+                {
+                    font-size: 10px;
+                    color: $primary-color;
+                }
+                a
+                {
+                    color: $primary-color;
+    
+                    i
+                    {
+                        color: $primary-color;
+
+                    }
+                }
+            }
+
+            .products-container
+            {
+                grid-template-columns: repeat(2, 1fr);
+                box-shadow: none;
+                width: 90%;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                overflow-x: hidden;
+                
+
+                .product
+                {
+                    .info
+                    {
+                        h4, h1
+                        {
+                            font-size: 14px;
+                        }
+
+                        h4
+                        {
+                            font-size: 10px;
+                        }
+
+                        small
+                        {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .hero
+        {
+            box-sizing: border-box;
+            overflow-x: hidden;
+            padding: 0%;
+            margin: 0;
+            height: max-content;
+
+
+            .container
+            {
+                display: none;
+            }
+
+
+
+            .grid-container
+            {
+                grid-template-columns: repeat(1, 1fr);
+                width: 95%;
+                left: 0;
+                height: max-content;
+
+                .img-container
+                {
+                    overflow-x: hidden;
+                    height: max-content;
+                    margin-bottom: 20px;
+
+                    img
+                    {
+                        height: 50%;
+                    }
+
+                    .micro-header
+                    {
+                        width: 90%;
+                        padding: 0;
+                        left: 0;
+                        margin-bottom: 10px;
+
+                        p
+                        {
+                            padding: 0;
+
+                            a
+                            {
+                                font-size: 10px;
+                            }
+
+                            font-size: 10px;
+
+                        }
+                    }
+                }
+
+                div:nth-child(2), div:nth-child(3)
+                {
+                    width: 90%;
+                    padding-bottom: 10px;
+                    overflow-x: hidden;
+                    height: max-content;
+                    box-sizing: border-box;
+                    padding: 5%;
+                    justify-content: flex-start;
+                }
+
+            }
+
+        }
+
+
+    }
+}
