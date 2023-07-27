@@ -82,6 +82,15 @@ input,input:active
     border-radius: 5%;
 }
 
+.active
+{
+    display: flex !important;
+}
+
+.hidden
+{
+    display: none !important;
+}
 
 $cols:(1,2,3,4,5,6, 7, 8);
 
@@ -241,7 +250,6 @@ $cols:(1,2,3,4,5,6, 7, 8);
 
     &:hover
     {
-        transition: all 1s ease-in;
         background-color: $gold;
         color: $theme-color;
     }
@@ -259,7 +267,6 @@ $cols:(1,2,3,4,5,6, 7, 8);
 
     &:hover
     {
-        transition: all 1s ease-in;
         background-color: $primary-color;
         color: $theme-color;
     }

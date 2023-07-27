@@ -14,6 +14,7 @@ body
         box-sizing: border-box;
         padding-top: 8%;
         padding-bottom: 2%;
+        background-attachment: fixed;
 
         .grid-2
         {
@@ -25,6 +26,7 @@ body
                 width: 80%;
                 position: relative;
                 top: -15%;
+
                 p
                 {
                     margin-top: -5px;
@@ -32,19 +34,21 @@ body
                     font-size: 15px;
                     line-height: 20px;
                 }
+                
                 a
                 {
                     background-color: darken($theme-color, 2);
                     border: 1px solid $primary-color;
-                   
+                    transition: all 0.4s ease-in;
                     i   
                     {
+                        transition: all 0.5s ease-in;
                         margin-right: 5px;
+                        color: $primary-color;
                     }
 
                     &:hover
                     {
-                        transition: all 1s ease-out;
                         @extend .btn-primary;
                     }
                 }
@@ -55,6 +59,7 @@ body
             {
                 width: 100%;
                 animation: fade 1s forwards ease-in;
+                transform: rotate(30deg)
             }
         }
     }

@@ -136,9 +136,6 @@ body
 
                 // *{border: 1px solid orangered;}  
 
-
-
-
                 .cta
                 {
                     border-radius: inherit;
@@ -636,5 +633,273 @@ body
 
             }
         }
+    }
+}
+
+@media screen and (max-width: 868px)
+{
+
+    body
+    {
+        overflow-x: hidden !important;
+
+        .desktop-header
+        {
+            & > i
+            {
+                display: flex;
+
+            }
+        }
+
+        .menu
+        {
+            position: fixed;
+        }
+
+        main
+        {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+
+            .side-bar
+            {
+                position: fixed;
+                padding-top: 18%;
+                width: 70%;
+                z-index: 98;
+                backdrop-filter: blur(2px);
+                animation: slideIn 1s ease-out forwards;
+                display: none;
+            }
+
+            .dashboard-area
+            {
+                left: 0;
+                width: 100%;
+                height: max-content;
+
+                .btn-left
+                {
+                    display: inline-block;
+                    position: relative;
+                    left: 2%;
+                    margin-bottom: 10px;
+                    padding: 5px 15px;                    
+                }
+
+                & > div
+                {
+                    height: max-content;
+
+                    h4
+                    {
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    & > div
+                    {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+
+                .overview
+                {
+                    height: max-content;
+                    width: 100%;
+
+                    .cta
+                    {
+                        height: max-content;
+                        grid-template-columns: repeat(1, 1fr);
+
+                        .cta-item
+                        {
+                            margin: 0 auto;
+                            width: 80%;
+                            padding: 20px;
+                        }
+                    }
+
+
+
+                    .grid-container
+                    {
+                        grid-template-columns: repeat(1, 1fr);
+
+                        .card
+                        {
+                            width: 80%;
+                            margin: 0 auto;
+                            height: 150px;
+                        }
+                    }
+                }
+
+                div
+                {
+                    overflow-x: hidden !important;
+                }
+
+                .edit-container
+                {
+                    width: 95%;
+                    margin: 0 auto;
+                    overflow-x: hidden;
+
+                    form
+                    {
+                        width: 90%;
+                        height: max-content;
+                        padding-bottom: 30px;
+
+                        input, select
+                        {
+                            width: 90%;
+                            padding: 10px;
+                        }
+                    }
+                }
+
+                .products-container
+                {
+                    height: max-content;
+                    width: 100%;
+                    display: block;
+
+                    .products
+                    {
+                        width: 100%;
+
+                        .container
+                        {
+                            width: 100%;
+                            min-height: 40vh;
+                            max-height: max-content;
+
+                            .product
+                            {
+                                width: 100%;
+                                padding: 1% 2%;
+
+                                p:nth-of-type(2), p:nth-of-type(4)
+                                {
+                                    display: none;
+                                }
+
+                                p
+                                {
+                                    font-size: 10px;
+                                }
+
+                                a
+                                {
+                                    font-size: 8px;
+                                    margin-right: 10px;
+
+                                    i
+                                    {
+                                        margin-right: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .stats
+                    {
+                        width: 100%;
+                        margin-top: 10%;
+                        margin-bottom: 20px;
+                        left: 0;
+
+                        .card
+                        {
+                            margin-bottom: 20px;
+                            width: 80%;
+                        }
+                    }
+                }
+
+                .advert-container
+                {
+                    width: 100%;
+                    height: max-content;
+
+                    .advert
+                    {
+                        width: 95%;
+                        height: max-content;
+                        padding: 10px 0;
+                        margin: 10px 0;
+                        .grid-container
+                        {
+                            width: 80%;
+                            height: max-content;
+                            display: inline-flex;
+                            flex-wrap: wrap-reverse;
+
+                            div
+                            {
+                                align-items: flex-start;
+
+                                h4
+                                {
+                                    width: max-content;
+                                }
+
+                                * 
+                                {
+                                    align-self: flex-start;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .micro-banner
+                {
+                    width: 90%;
+                    height: max-content;
+                    padding-top: 10px;
+
+                    h4
+                    {
+                        font-size: 12px;
+                    }
+                }
+
+                .view-container
+                {
+                    height: max-content;
+
+                    .grid-container
+                    {
+                        height: max-content;
+                        grid-template-columns: repeat(1, 1fr);
+
+                        div
+                        {
+                            height: max-content;
+                            align-items: flex-start;
+
+                        
+
+                            & > h4, & > div > h4
+                            {
+                                width: max-content;
+                                align-self: flex-start;
+                                text-align: start;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }  
     }
 }

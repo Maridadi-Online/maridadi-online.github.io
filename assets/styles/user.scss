@@ -729,17 +729,28 @@ body
                     .pr-container
                     {
                         width: 99%;
-                        height: max-content;
+                        min-height: 50vh;
+                        max-height: max-content;
 
                         .pr-item
                         {
                             width: 95%;
                             align-content: center;
-                            height: 60px;
+                            height: 50px;
+                            padding: 7.5px;
 
                             img
                             {
                                 height: 100%;
+                            }
+
+                            input
+                            {
+                                height: 80%;
+                                border: 1px solid $primary-color;
+                                border-radius: 5px;
+                                box-sizing: border-box;
+                                padding: 0 5px;
                             }
 
                             div
@@ -766,7 +777,17 @@ body
                             }
                         }
                     }
+                    .total-container
+                    {
+                        width: 85%;
+                        margin-top: 2%;
 
+                        a
+                        {
+                            padding: 7px 10px;
+                            margin-top: 10px;
+                        }
+                    }
                 }
 
                 .info-container
@@ -811,6 +832,51 @@ body
                     }
                 }
 
+            }
+
+            .checkout-wrapper
+            {
+                display: flex;
+                flex-wrap: wrap-reverse;
+                height: max-content;
+                margin-bottom: 20px;
+
+                .info-container
+                {
+                    width: 100%;
+                    left: 0;
+                    padding: 20px 5px;
+                    
+                    form
+                    {
+                        width: 90%;
+                        padding-left: 0;
+                    }
+                }
+
+                .pr-container
+                {
+                    width: 100%;
+                    height: max-content;
+                    margin-bottom: 20px;
+
+                    .pr-wrapper
+                    {
+                        margin-bottom: 20px;
+                        min-height: 30vh;
+                        max-height: max-content;
+                        width: 100%;
+                        overflow-x: hidden;
+                        .pr-item
+                        {
+                            width: 100%;
+                            height: 50px;
+                            overflow-x: hidden;
+                            padding: 10px;
+                        }
+                    }
+
+                }
             }
         }
     }

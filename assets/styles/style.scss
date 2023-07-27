@@ -45,18 +45,9 @@ body
                 }
                 a
                 {
-                    background-color: darken($theme-color, 2);
-                    border: 1px solid $primary-color;
-                   
                     i   
                     {
                         margin-right: 5px;
-                    }
-
-                    &:hover
-                    {
-                        transition: all 1s ease-out;
-                        @extend .btn-primary;
                     }
                 }
 
